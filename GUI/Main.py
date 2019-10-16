@@ -56,7 +56,7 @@ class Ui_Form(object):
 
     def create_new(self):
         l = len(os.listdir('./Image/'))
-        os.mkdir(f'./Image/customer_id:{l + 1}')
+        os.mkdir(f'./Image/customer_id{l + 1}')
 
     def __init__(self, Form):
         self.count = 0

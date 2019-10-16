@@ -89,8 +89,8 @@ class CamMainWindow(QWidget):
             buttonReply = QMessageBox.question(self, 'cam', "Image is clear or not?",QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
             if buttonReply==QMessageBox.Yes:
                 l=os.listdir('./Image/')
-                l1 = os.listdir(f'./Image/customer_id:{len(l)}/')
-                cv2.imwrite('./Image/customer_id:{}/input{}.jpeg'.format(len(l), len(l1) + 1 ),img)
+                l1 = os.listdir(f'./Image/customer_id{len(l)}/')
+                cv2.imwrite('./Image/customer_id{}/input{}.jpeg'.format(len(l), len(l1) + 1 ),img)
                 #cv2.destroyAllWindow()
                 #time.sleep(1)
                 self.close()
