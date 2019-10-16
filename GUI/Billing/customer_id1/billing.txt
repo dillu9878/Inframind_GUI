@@ -1,4 +1,5 @@
 S.N     Product Name     Price
 1.     Done      1
+2.     Done      1
 
-        Total:   1
+        Total:   2
