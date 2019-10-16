@@ -63,7 +63,7 @@ class Ui_Form(object):
         self.create_new()
         Form.setObjectName("Form")
         Form.resize(640, 481)
-        Form.setGeometry(-170, -100, 680, 500)
+        Form.setGeometry(0, 0, 680, 500)
         self.label = QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(-170, -100, 951, 681))
         self.label.setStyleSheet("image: url(:/new1/linux_debian_brand_logo_spiral_93908_1600x900.jpg);")
