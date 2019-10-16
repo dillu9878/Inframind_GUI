@@ -9,8 +9,25 @@ import os, sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from finalCam import CamMainWindow
 from BillingWindow import Ui_Form_B
+from fun import Sample
+from fun import Customer
 
 class Ui_Form(object):
+
+    def algo(self):
+        colagte_CP = Sample()
+        colagte_CP.name = "Colgate Cavity Protection"
+        colagte_CP.price = 10
+        colagte_CP.discount = 0
+
+        colagte_V = Sample()
+        colagte_V.name = "Colgate Vedshakti"
+        colagte_V.price = 20
+        colagte_V.discount = 5
+
+        customer_1 = Customer()
+        customer_1.bill()
+
 
     def camera(self):
         '''
@@ -48,9 +65,15 @@ class Ui_Form(object):
         self.counter_label.setText(_translate("Form", str(self.count)))
 
     def biling(self):
+
+        self.algo()
+
         self.ui = Ui_Form_B()
         _translate = QtCore.QCoreApplication.translate
         self.ui.Form.show()
+
+
+
         self.count= 0
         self.counter_label.setText(_translate("Form", str(self.count)))
 

@@ -13,6 +13,8 @@ class Ui_Form_B(object):
     def done(self):
         l = len(os.listdir('./Image/'))
         os.mkdir(f'./Image/customer_id{l + 1}')
+        l = len(os.listdir('./Billing/'))
+        os.mkdir(f'./Billing/customer_id{l + 1}')
         self.Form.close()
 
     def print(self):
@@ -99,8 +101,8 @@ class Ui_Form_B(object):
         self.text_box_area.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.text_box_area.setObjectName("text_box_area")
 
-
-        f = open('./Billing/customer_id1/billing.txt', 'r')
+        l = len(os.listdir('./Billing/'))
+        f = open(f'./Billing/customer_id{l}/billing.txt', 'r')
         s = f.read()
         self.text_box_area.setText(s)
 
