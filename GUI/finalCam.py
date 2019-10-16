@@ -40,7 +40,7 @@ class CamMainWindow(QWidget):
         super().__init__()
         self.ui = Ui_Form_Cam()
         self.ui.setupUi(self)
-        self.setGeometry(-170, -100, 680, 500)
+        self.setGeometry(0, 0, 680, 500)
 
 
         # create a timer
