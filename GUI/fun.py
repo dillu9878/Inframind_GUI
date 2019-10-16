@@ -37,7 +37,7 @@ class Customer:
         arr = np.array(img)
         img = np.reshape(img, (1, 64, 64, 3))
         img = img / 255
-        '''
+
         result = classifier.predict(img)
         
         if result[0][0] < 0.5:
@@ -50,7 +50,7 @@ class Customer:
         return prediction.name, prediction.price-prediction.discount
         '''
         return 'Done', 1
-        
+        '''
         
     def bill(self):
         l = len(os.listdir('./Image/'))
